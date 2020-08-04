@@ -26,6 +26,7 @@ $(call inherit-product, vendor/bliss/config/common_full_phone.mk)
 $(call inherit-product-if-exists, vendor/gapps/config.mk)
 TARGET_BOOT_ANIMATION_RES := 1080
 BLISS_BUILDTYPE=OFFICIAL
+TARGET_GAPPS_ARCH := arm64
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := vince
 PRODUCT_NAME := bliss_vince
