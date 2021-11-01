@@ -129,6 +129,12 @@ PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_policy_configuration.xml
 
+# Enable updating of APEXes
+$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
+# Disable APEX compression
+# Keep this after including updatable_apex.mk
+PRODUCT_COMPRESSED_APEX := false
+
 # Bluetooth
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.btconfigstore@1.0.vendor:64 \
