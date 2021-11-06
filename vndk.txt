@@ -1,5 +1,8 @@
 libunwindstack
 libutils
+libdexfile
+libdexfile_support
+libdexfile_external
 libutilscallstack
 libz
 android.frameworks.automotive.display@1.0
